@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ToggleButton
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/on_off_button_selector"
+        android:id="@+id/button"
+        android:textOff=""
+        android:textOn=""
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"/>
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/button"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/plus_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/button"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_plus"/>
+
+    <LinearLayout
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/plus_button"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textAlignment="viewEnd"
+            android:textSize="100dp"
+            android:layout_weight="0.63"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="˚C"
+            android:layout_weight="0.37"
+            android:gravity="top"
+            android:textSize="50dp"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/minus_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/ic_minus"
+        android:layout_below="@id/display"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/ambient_temperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Room temperature is currently 24˚C"
+        android:layout_below="@id/minus_button"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_marginTop="5dp"
+        android:padding="20dp"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/fanSpeed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ambient_temperature"
+        android:text="Fan Speed"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+
+
+
+        />
+
+    <AutoCompleteTextView
+        android:id="@+id/windDirection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fanSpeed"
+        android:text="Wind direction"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+
+
+
+
+        />
+
+</RelativeLayout>
