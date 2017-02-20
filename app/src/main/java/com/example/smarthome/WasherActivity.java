@@ -37,7 +37,7 @@ public class WasherActivity extends AppCompatActivity {
     };
 
     private static final String[] WASHERCYCLES = new String[] {
-            "1000", "900", "800", "700", "600", "500", "400"
+            "1000 spins", "900 spins", "800 spins", "700 spins", "600 spins", "500 spins", "400 spins"
     };
 
     private static final String[] WASHERTEMPERATURE = new String[] {

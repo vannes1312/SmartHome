@@ -75,7 +75,6 @@ public class AirConditionActivity extends AppCompatActivity {
         });
     }
 
-
     public int increasingTemperature (TextView textView) {
         int temperature = Integer.parseInt(String.valueOf(textView.getText()));
         temperature += 1;
@@ -95,6 +94,5 @@ public class AirConditionActivity extends AppCompatActivity {
         } else {
             return temperature;
         }
-
     }
 }
