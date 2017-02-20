@@ -79,31 +79,37 @@
         android:layout_marginTop="5dp"
         android:padding="20dp"/>
 
-    <AutoCompleteTextView
+    <TextView
         android:id="@+id/fanSpeed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ambient_temperature"
         android:text="Fan Speed"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:textSize="20dp"
+        android:layout_below="@id/ambient_temperature" />
 
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fanSpeedSpinner"
+        android:layout_margin="10dp"
+        android:layout_below="@id/fanSpeed"/>
 
-
-        />
-
-    <AutoCompleteTextView
+    <TextView
         android:id="@+id/windDirection"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/fanSpeed"
+        android:layout_below="@id/fanSpeedSpinner"
         android:text="Wind direction"
-        android:paddingTop="10dp"
-        android:textSize="20dp"
+        android:paddingTop="5dp"
+        android:textSize="20dp" />
 
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/windDirectionSpinner"
+        android:layout_margin="10dp"
+        android:layout_below="@id/windDirection"/>
 
-
-
-        />
 
 </RelativeLayout>

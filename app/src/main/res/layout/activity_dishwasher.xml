@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/dishwasher_spinner_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+    </Spinner>
+
+    <ProgressBar
+        android:id="@+id/dishwasher_progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:minHeight="250dp"
+        android:minWidth="250dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/progress_bar"
+        android:layout_below="@id/dishwasher_spinner_1"
+        android:layout_centerHorizontal="true"
+        />
+
+    <ToggleButton
+        android:id="@+id/dishwasher_start_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/start_stop_selector"
+        android:textOn=""
+        android:textOff=""
+        android:layout_below="@id/dishwasher_progressBar"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/dishwasher_time_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Time Left: 47'"
+        android:textAlignment="center"
+        android:layout_below="@id/dishwasher_start_button"/>
+
+    <TextView
+        android:id="@+id/dishwasher_est_finish_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Estimated Finish Time: 17:54"
+        android:textAlignment="center"
+        android:layout_below="@id/dishwasher_time_left"/>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dishwasher_est_finish_time"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/dishwasher_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"/>
+
+        <Button
+            android:id="@+id/dishwasher_drain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel and Drain"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -18,10 +18,16 @@ public class AirConditionActivity extends AppCompatActivity {
     private Button plusButton;
     private Button minusButton;
     private TextView temperatureDisplay;
+    private Spinner fanOptionsSpinner;
+    private Spinner windDirectionSpinner;
     private int temperature = 19;
 
     private static final String[] FANOPTIONS = new String[] {
             "Auto", "Low", "Medium", "High", "Turbo", "I'm flying"
+    };
+
+    private static final String[] WINDDIRECTIONOPTIONS = new String[] {
+            "Flap", "Halt"
     };
 
     @Override
@@ -35,12 +41,15 @@ public class AirConditionActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(R.layout.spinner_item);
         spinner.setAdapter(adapter);
 
-        ArrayAdapter<String> fanSpeedAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_dropdown_item_1line, FANOPTIONS);
-        AutoCompleteTextView textView = (AutoCompleteTextView)
-                findViewById(R.id.fanSpeed);
-        textView.setAdapter(fanSpeedAdapter);
+        fanOptionsSpinner = (Spinner) findViewById(R.id.fanSpeedSpinner);
+        ArrayAdapter<String> fanAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, FANOPTIONS);
+        fanAdapter.setDropDownViewResource(R.layout.spinner_item);
+        fanOptionsSpinner.setAdapter(fanAdapter);
 
+        windDirectionSpinner = (Spinner) findViewById(R.id.windDirectionSpinner);
+        ArrayAdapter<String> windDirectionAdapter = new ArrayAdapter<String>(this, R.layout.spinner_item, WINDDIRECTIONOPTIONS);
+        windDirectionAdapter.setDropDownViewResource(R.layout.spinner_item);
+        windDirectionSpinner.setAdapter(windDirectionAdapter);
 
         plusButton = (Button) findViewById(R.id.plus_button);
         minusButton = (Button) findViewById(R.id.minus_button);

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_burners"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:columnCount="2"
+    android:rowCount="3"
+    android:orientation="horizontal"
+    tools:context="com.example.smarthome.CookerActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/leftTopBurnerImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/burner_off"
+            />
+        <EditText
+            android:id="@+id/leftTopBurnerEditBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/rightTopBurnerImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/burner_off"
+            />
+        <EditText
+            android:id="@+id/rightTopBurnerEditBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/leftBotBurnerImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/burner_off"
+            />
+        <EditText
+            android:id="@+id/leftBotBurnerEditBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:id="@+id/rightBotBurnerImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/burner_off"
+            />
+        <EditText
+            android:id="@+id/rightBotBurnerEditBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="24dp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/applyBtn"
+        android:text="Apply"
+        android:onClick="applyChanges"
+        />
+
+</GridLayout>
