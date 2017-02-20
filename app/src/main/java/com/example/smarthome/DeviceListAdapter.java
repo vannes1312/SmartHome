@@ -71,6 +71,34 @@ public class DeviceListAdapter extends RecyclerView.Adapter<DeviceListAdapter.Vi
                      intent = new Intent(context, AirConditionActivity.class);
                      context.startActivity(intent);
                      break;
+                 case 2:
+                     intent = new Intent(context, LightsActivity.class);
+                     context.startActivity(intent);
+                     break;
+                 case 3:
+                     intent = new Intent(context, LocksActivity.class);
+                     context.startActivity(intent);
+                     break;
+                 case 4:
+                     intent = new Intent(context, RefrigeratorActivity.class);
+                     context.startActivity(intent);
+                     break;
+                 case 5:
+                     intent = new Intent(context, StoveActivity.class);
+                     context.startActivity(intent);
+                     break;
+                 case 6:
+                     intent = new Intent(context, CookerActivity.class);
+                     context.startActivity(intent);
+                     break;
+                 case 7:
+                     intent = new Intent(context, DishwasherActivity.class);
+                     context.startActivity(intent);
+                     break;
+                 case 8:
+                     intent = new Intent(context, WasherActivity.class);
+                     context.startActivity(intent);
+                     break;
                  default:
                      break;
              }
